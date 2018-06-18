@@ -3,6 +3,8 @@ var consign = require('consign')
 
 module.exports = function(){
 	var app =  express()
-	consign().into(app)
+	consign()
+	.include('controllers')
+	.into(app)
 	return app
 }
